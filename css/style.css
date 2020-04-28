@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-box {
+    margin: auto;
+    width: 50%;
+}
+
+.header {
+    text-align: center;
+    font-size: 70px;
+}
+
+.output-box {
+    margin: 70px;
+}
+
+.output {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+.output-number {
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+}
+
+.worldwide {
+    text-align: center;
+    font-size: 80px;
+}
+
+#confirmed-number {
+    color: red;
+}
+
+#deaths-number {
+    color: black;
+}
+
+#recovered-number {
+    color: green;
+}

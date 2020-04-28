@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>COVID-19 Statistics</title>
+</head>
+<body>
+    <div class="header-box">
+        <h1 class="header">COVID-19 Statistics</h1>
+    </div>
+    <hr>
+    <h1 class="worldwide">Worldwide</h1>
+    <div id="TotalConfirmed"></div>
+    <div id="TotalDeaths"></div>
+    <div id="TotalRecovered"></div>
+
+    <script>
+            fetch('https://api.covid19api.com/world/total')
+                .then(response => response.json())
+                .then(total => {
+                    let outputConfirmed = '<div class="output-box"><h2 class="output" id="confirmed">Confirmed</h2> </br>' + '<h2 class="output-number" id="confirmed-number">' + total.TotalConfirmed + '</h2></div>'; 
+                    let outputDeaths = '<div class="output-box"><h2 class="output" id="deaths">Deaths</h2> </br>' + '<h2 class="output-number" id="deaths-number">' + total.TotalDeaths + '</h2></div>';
+                    let outputRecovered = '<div class="output-box"><h2 class="output" id="recovered">Recovered</h2> </br>' + '<h2 class="output-number" id="recovered-number">' + total.TotalRecovered + '</h2></div';               
+                    document.getElementById("TotalConfirmed").innerHTML = outputConfirmed;
+                    document.getElementById("TotalDeaths").innerHTML = outputDeaths;
+                    document.getElementById("TotalRecovered").innerHTML = outputRecovered;
+                });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
