@@ -9,6 +9,7 @@
     <title>COVID-19 Statistics</title>
 </head>
 <body>
+<div class="background">
     <div class="navigation-wrap bg-light start-header start-style">
 		<div class="container">
 			<div class="row">
@@ -22,36 +23,19 @@
 						</button>
 						
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<h1><a class="nav-title" href="">COVID-19 Statistics</a></h1>
 							<ul class="navbar-nav ml-auto py-4 py-md-0">
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<a class="dropdown-item" href="#">Something else here</a>
-										<a class="dropdown-item" href="#">Another action</a>
-									</div>
+									<a class="nav-link" href="#">Home</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Portfolio</a>
+									<a class="nav-link" href="#">Countries</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Agency</a>
+									<a class="nav-link" href="#">Graphs</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<a class="dropdown-item" href="#">Something else here</a>
-										<a class="dropdown-item" href="#">Another action</a>
-									</div>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Journal</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Contact</a>
+									<a class="nav-link" href="#">Prognoses</a>
 								</li>
 							</ul>
 						</div>
@@ -62,18 +46,20 @@
 		</div>
 	</div>
 
-    <h1 class="worldwide">Worldwide</h1>
+	<div class ="output-header">
+		<h1 class="worldwide">Worldwide</h1>
+	</div>
     <div id="TotalConfirmed"></div>
     <div id="TotalDeaths"></div>
-    <div id="TotalRecovered"></div>
-
+	<div id="TotalRecovered"></div>
+</div>
     <script>
             fetch('https://api.covid19api.com/world/total')
                 .then(response => response.json())
                 .then(total => {
-                    let outputConfirmed = '<div class="output-box"><h2 class="output" id="confirmed">Confirmed</h2> </br>' + '<h2 class="output-number" id="confirmed-number">' + total.TotalConfirmed + '</h2></div>'; 
-                    let outputDeaths = '<div class="output-box"><h2 class="output" id="deaths">Deaths</h2> </br>' + '<h2 class="output-number" id="deaths-number">' + total.TotalDeaths + '</h2></div>';
-                    let outputRecovered = '<div class="output-box"><h2 class="output" id="recovered">Recovered</h2> </br>' + '<h2 class="output-number" id="recovered-number">' + total.TotalRecovered + '</h2></div';               
+                    let outputConfirmed = '<div class="output-box"><h2 class="output" id="confirmed">Confirmed</h2> <p class="output-number" id="confirmed-number">' + total.TotalConfirmed + '</p></div>'; 
+                    let outputDeaths = '<div class="output-box"><h2 class="output" id="deaths">Deaths</h2> <p class="output-number" id="deaths-number">' + total.TotalDeaths + '</p></div>';
+                    let outputRecovered = '<div class="output-box"><h2 class="output" id="recovered">Recovered</h2> <p class="output-number" id="recovered-number">' + total.TotalRecovered + '</p></div>';               
                     document.getElementById("TotalConfirmed").innerHTML = outputConfirmed;
                     document.getElementById("TotalDeaths").innerHTML = outputDeaths;
                     document.getElementById("TotalRecovered").innerHTML = outputRecovered;
@@ -82,6 +68,6 @@
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
