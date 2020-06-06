@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
         pageTitle: "COVID-19 Statistics",
         stylesheet: "style",
         activeHome: "nav-item pl-4 pl-md-0 ml-0 ml-md-4 active",
-        activeCountries: "nav-item pl-4 pl-md-0 ml-0 ml-md-4"
+        activeCountries: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
     });
 });
 

@@ -4,36 +4,57 @@
     
     <%- include('includes/navigation.ejs') %>
 
-    <table class="country-table">
+    <table class="countries-table">
         <thead>
           <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Points</th>
-            <th>Team</th>
+            <th>Continent</th>
+            <th>Country</th>
+            <th>Population</th>
+            <th>Tests</th>
+            <th>Infected</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+            <th>Critical</th>
+            <th>Active</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Domenic</td>
-            <td>88,110</td>
-            <td>dcode</td>
-          </tr>
-          <tr class="active-row">
-            <td>2</td>
-            <td>Sally</td>
-            <td>72,400</td>
-            <td>Students</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Nick</td>
-            <td>52,300</td>
-            <td>dcode</td>
-          </tr>
+          <% for (var i = 0; i < continents.length; i++) { %>
+              <% for (var x = 0; x < continents[i].countries.length; x++) { %>
+                <tr>
+                  <td><%= continents[i].countries[x].continent %></td>
+                  <td><%= continents[i].countries[x].country %></td>
+                  <td><%= continents[i].countries[x].population %></td>
+                  <td><%= continents[i].countries[x].tests %></td>
+                  <td><%= continents[i].countries[x].cases %></td>
+                  <td><%= continents[i].countries[x].deaths %></td>
+                  <td><%= continents[i].countries[x].recovered %></td>
+                  <td><%= continents[i].countries[x].critical %></td>
+                  <td><%= continents[i].countries[x].active %></td>
+                </tr>
+              <% } %>
+            <% } %>
         </tbody>
       </table>
 </div>
+
+<!--
+<td>1</td>
+<td>Domenic</td>
+<td>88,110</td>
+<td>dcode</td>
+</tr>
+<tr class="active-row">
+<td>2</td>
+<td>Sally</td>
+<td>72,400</td>
+<td>Students</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nick</td>
+<td>52,300</td>
+<td>dcode</td>
+-->
     
 <%- include('includes/footer.ejs') %>
