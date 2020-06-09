@@ -30,7 +30,7 @@ body {
 }
 
 .countries-table thead tr {
-    background-color: darkblue;
+    background-color: #ff0037;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -51,12 +51,12 @@ body {
 }
 
 .countries-table tbody tr:last-of-type {
-    border-bottom: 2px solid darkblue;
+    border-bottom: 2px solid #ff0037;
 }
 
 .countries-table tbody tr.active-row {
     font-weight: bold;
-    color: darkblue;
+    color: #ff0037;
 }
 
 .flag {
@@ -64,10 +64,11 @@ body {
 }
 
 .countries-table th {
-    background: darkblue;
+    background: #ff0037;
     position: -webkit-sticky;
     position: sticky;
-    top: 92px;
+    top: 0px;
+    color: #1e2530;
 }
 
 th:after {
