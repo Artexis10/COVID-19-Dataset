@@ -3,10 +3,13 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
+/*
 const Continent = require('./models/Continent');
 const CountrySchema = require('./models/Country');
 const Country = mongoose.model('Country', CountrySchema);
 const fetch = require("node-fetch");
+*/
+const databaseCreatorFunctions = require('./database-creator.js')
 require('dotenv/config');
 
 app.set('view engine', 'ejs');  
@@ -16,9 +19,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Import Routes
 const indexRoute = require('./routes/index');
 
+const continentsRoute = require('./routes/continents');
+
 const countriesRoute = require('./routes/countries');
 
 app.use('/', indexRoute);
+app.use('/continents', continentsRoute);
 app.use('/countries', countriesRoute);
 
 app.use(function(req, res){
@@ -27,6 +33,7 @@ app.use(function(req, res){
         pageNotFound: "Page Not Found!",
         stylesheet: "404",
         activeHome: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
+        activeContinents: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
         activeCountries: "nav-item pl-4 pl-md-0 ml-0 ml-md-4"
     });
 });
@@ -47,6 +54,9 @@ app.listen(3000, () => {
     console.log("Server is Running on Port 3000");
 });
 
+databaseCreatorFunctions.FetchingContinentDataFromCOVID_19_API();
+
+/*
 function FetchingContinentDataFromCOVID_19_API() {
     fetch('https://corona.lmao.ninja/v2/continents?yesterday=true&sort')
     .then(response => response.json())
@@ -316,7 +326,6 @@ function InsertingCountriesToContinentCollection(list_of_countries, continents_a
                     criticalPerOneMillion: list_of_countries[i].criticalPerOneMillion,
                     last_update: new Date(list_of_countries[i].updated)
                 });
-
                 if (list_of_countries[i].continent === '') {
                     country.continent = 'Unknown';
                     countries_arr['Unknown'].push(country);
@@ -324,6 +333,8 @@ function InsertingCountriesToContinentCollection(list_of_countries, continents_a
                     countries_arr[list_of_countries[i].continent].push(country);
                 }
             };
+
+            console.log(countries_arr);
 
             for (i = 0; i < continents_arr.length; i++) {
                 Continent.updateMany({continent: continents_arr[i].continent}, { $push: {countries: countries_arr[continents_arr[i].continent]} }, function(error){
@@ -337,10 +348,5 @@ function InsertingCountriesToContinentCollection(list_of_countries, continents_a
             }
 }
 
-/*
-var utcDate = new Date(1591231059980);
-
-console.log(utcDate.toString());
-*/
-
 FetchingContinentDataFromCOVID_19_API();
+*/

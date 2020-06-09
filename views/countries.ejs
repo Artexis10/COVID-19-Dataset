@@ -1,42 +1,49 @@
 <%- include('includes/head.ejs') %>
 
 <div class="background">
-    
-    <%- include('includes/navigation.ejs') %>
 
-    <table class="countries-table">
+  <%- include('includes/navigation.ejs') %>
+
+    <table class="countries-table sticky">
         <thead>
           <tr>
-            <th>Continent</th>
             <th>Country</th>
+            <th>Flag</th>
+            <th class="starting-column">Continent</th>
             <th>Population</th>
             <th>Tests</th>
             <th>Infected</th>
             <th>Deaths</th>
             <th>Recovered</th>
+            <th>Infected today</th>
+            <th>Deaths today</th>
+            <th>Recovered today</th>
             <th>Critical</th>
             <th>Active</th>
+            <th>Last Updated</th>
           </tr>
         </thead>
         <tbody>
-          <% for (var i = 0; i < continents.length; i++) { %>
-              <% for (var x = 0; x < continents[i].countries.length; x++) { %>
+            <% for (var i = 0; i < countries.length; i++) { %>
                 <tr>
-                  <td><%= continents[i].countries[x].continent %></td>
-                  <td><%= continents[i].countries[x].country %></td>
-                  <td><%= continents[i].countries[x].population %></td>
-                  <td><%= continents[i].countries[x].tests %></td>
-                  <td><%= continents[i].countries[x].cases %></td>
-                  <td><%= continents[i].countries[x].deaths %></td>
-                  <td><%= continents[i].countries[x].recovered %></td>
-                  <td><%= continents[i].countries[x].critical %></td>
-                  <td><%= continents[i].countries[x].active %></td>
+                  <td><%= countries[i].country %></td>
+                  <td><img src="<%= countries[i].countryInfo.flag %>" class="flag"></img></td>
+                  <td><%= countries[i].continent %></td>
+                  <td><%= countries[i].population.toLocaleString() %></td>
+                  <td><%= countries[i].tests.toLocaleString() %></td>
+                  <td><%= countries[i].cases.toLocaleString() %></td>
+                  <td><%= countries[i].deaths.toLocaleString() %></td>
+                  <td><%= countries[i].recovered.toLocaleString() %></td>
+                  <td><%= countries[i].todayCases.toLocaleString() %></td>
+                  <td><%= countries[i].todayDeaths.toLocaleString() %></td>
+                  <td><%= countries[i].todayRecovered.toLocaleString() %></td>
+                  <td><%= countries[i].critical.toLocaleString() %></td>
+                  <td><%= countries[i].active.toLocaleString() %></td>
+                  <td><%= new Date(countries[i].last_update) %></td>
                 </tr>
-              <% } %>
-            <% } %>
+             <% } %>
         </tbody>
       </table>
-</div>
 
 <!--
 <td>1</td>

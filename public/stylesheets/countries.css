@@ -1,6 +1,11 @@
 * {
     margin: 0;
-	padding: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -15,12 +20,12 @@ body {
 }
 
 .countries-table {
-    margin: 105px auto;
-    border-collapse: collapse;
+    margin: 105px auto 105px auto;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 0.9em;
-    min-width: 75%;
+    max-width: 80%;
     border-radius: 5px 5px 0 0;
-    overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -34,6 +39,7 @@ body {
 .countries-table th,
 .countries-table td {
     padding: 12px 15px;
+    text-align: center;
 }
 
 .countries-table tbody tr {
@@ -51,4 +57,20 @@ body {
 .countries-table tbody tr.active-row {
     font-weight: bold;
     color: darkblue;
+}
+
+.flag {
+    max-width: 100px;
+}
+
+.countries-table th {
+    background: darkblue;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 92px;
+}
+
+th:after {
+    bottom: 0;
+    border-bottom: 3px solid blue;
 }
