@@ -6,4 +6,23 @@
 body, html {
     height: 100%;
     width: 100%;
+    background-color: #696969;
+}
+
+.containers { 
+    box-sizing: border-box;
+    background: white;
+    margin: 92px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.item {
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
