@@ -241,7 +241,7 @@ body {
 	width: 0; }
   
   /*------------------------------------------------
-	  Start Styling
+	  
   -------------------------------------------------*/
   .mt20{margin-top:20px;}
   .site-wrapper {
@@ -321,7 +321,7 @@ body {
 	  text-transform: uppercase; }
   
   /*------------------------------------------------
-	  Home Page
+	
   -------------------------------------------------*/
   
   .hexagon-item:first-child {
@@ -507,7 +507,7 @@ body {
 	  transform: rotate(30deg) translate(87px, -80px);
   }
   /*------------------------------------------------
-	  Welcome Page
+	  
   -------------------------------------------------*/
   .author-image-large {
 	position: absolute;
