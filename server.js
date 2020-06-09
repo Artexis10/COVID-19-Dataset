@@ -2,13 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
-const path = require('path');
-/*
-const Continent = require('./models/Continent');
-const CountrySchema = require('./models/Country');
-const Country = mongoose.model('Country', CountrySchema);
-const fetch = require("node-fetch");
-*/
+//const path = require('path');
 const databaseCreatorFunctions = require('./database-creator.js')
 require('dotenv/config');
 
@@ -19,11 +13,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Import Routes
 const indexRoute = require('./routes/index');
 
+const worldwideRoute = require('./routes/worldwide');
+
 const continentsRoute = require('./routes/continents');
 
 const countriesRoute = require('./routes/countries');
 
 app.use('/', indexRoute);
+app.use('/worldwide', worldwideRoute);
 app.use('/continents', continentsRoute);
 app.use('/countries', countriesRoute);
 
