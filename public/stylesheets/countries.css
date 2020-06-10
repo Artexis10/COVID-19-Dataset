@@ -9,14 +9,14 @@ body, html {
 }
 
 body {
-	background-color: grey;
-	background-repeat: no-repeat;
+    background-image:url('../images/world-117174.png');
+	background-repeat:repeat;
 	background-size: cover;
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
-	font-weight: 400;
-	color: #212112;
+    font-weight: 400;
+    background-position: center;
 }
 
 .countries-table {
@@ -44,6 +44,8 @@ body {
 
 .countries-table tbody tr {
     border-bottom: 1px solid #dddddd;
+    background-color: rgba(255, 255, 255, 0.842);
+    color: #1e2530;
 }
 
 .countries-table tbody tr:nth-of-type(even) {

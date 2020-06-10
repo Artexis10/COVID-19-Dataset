@@ -8,9 +8,13 @@ body, html {
     width: 100%;
 }
 
+body{
+    background-image: url('../images/world-117174.png');
+}
+
 .containers { 
     box-sizing: border-box;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     margin: 50px;
     display: grid;
     gap: 50px;
@@ -18,7 +22,7 @@ body, html {
 }
 
 .item {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.863);
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
