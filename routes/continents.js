@@ -8,9 +8,10 @@ router.get('/', function(req, res) {
         res.render('continents', {
             pageTitle: "Continents",
             stylesheet: "continents",
-            activeHome: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
-            activeContinents: "nav-item pl-4 pl-md-0 ml-0 ml-md-4 active",
-            activeCountries: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
+            isActiveWorldwide: "inactive-link",
+            isActiveContinents: "active-link",
+            isActiveCountries: "inactive-link",
+            isActiveGraphs: "inactive-link",
             continents: continents
         });
     });
