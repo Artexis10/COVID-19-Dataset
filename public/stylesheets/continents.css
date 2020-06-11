@@ -9,21 +9,31 @@ body, html {
     padding-top: 45px !important;
 }
 
+body{
+    background-image: url('../images/world-117174.png');
+}
+
 .containers { 
     box-sizing: border-box;
+<<<<<<< HEAD
     background: white;
     margin: 45px;
+=======
+    background: rgba(255, 255, 255, 0);
+    margin: 50px;
+>>>>>>> c02d200e7f52532d890ac702788784410fab3366
     display: grid;
     gap: 50px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .item {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.863);
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+<<<<<<< HEAD
 }
 
 .continent-length-box {
@@ -39,4 +49,7 @@ body, html {
 
 .header-separator {
     background-color: black;
+=======
+    border-radius: 40px;
+>>>>>>> c02d200e7f52532d890ac702788784410fab3366
 }
