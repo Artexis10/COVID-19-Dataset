@@ -17,7 +17,7 @@ body {
 
 .page-content {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   padding: 1rem;
   margin: 0 auto;
   font-family: var(--font-sans); }
@@ -26,23 +26,25 @@ body {
       grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 800px) {
     .page-content {
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-columns: repeat(4, 1fr); } }
 
 .card {
   position: relative;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 600px;
   text-align: center;
   border: 0;
+  padding: 25px;
+  user-select: none;
   color: whitesmoke;
   background-color: whitesmoke;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1); }
   @media (min-width: 600px) {
     .card {
-      height: 350px; } }
+      /*height: 350px;*/ } }
   .card:before {
     content: '';
     position: absolute;
@@ -89,13 +91,13 @@ body {
     margin-top: 1rem; }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 2.4rem;
   font-weight: bold;
   line-height: 1.2; }
 
 .country-card {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.35;
   background-color: rgba(255, 255, 255, 0.2);
   width: 100%;
@@ -103,9 +105,6 @@ body {
   list-style: none;
   padding: 4px;
   border-radius: 7px; }
-
-.country-card div {
-  display: inline-block; }
 
 @media (hover: hover) and (min-width: 600px) {
   .card:after {
@@ -139,24 +138,14 @@ body {
     transition-duration: 0s; } }
 
 .left-column {
+  width: 100%;
   text-align: left; }
 
 .right-column {
+  width: 100%;
   text-align: right; }
 
 /*
-body, html {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background: linear-gradient(rgba(14, 17, 24, 0.90),
-    rgba(14, 17, 24, 0.90)), url(../images/colorful-world-map.png);
-    height: 100%;
-    width: 100%;
-}
-
 .continent-length-box {
         padding: 25px;
         background-color: white;

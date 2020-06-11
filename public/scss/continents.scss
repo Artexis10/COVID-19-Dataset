@@ -50,6 +50,7 @@ body {
   height: 600px;
   text-align: center;
   border: 0;
+  padding: 25px;
   user-select: none;
   color: whitesmoke;
   background-color: whitesmoke;
@@ -141,7 +142,7 @@ body {
 
 .country-card {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.35;
   background-color: rgba(255,255,255,0.2);
   width: 100%;
@@ -149,10 +150,6 @@ body {
   list-style: none;
   padding: 4px;
   border-radius: 7px;
-}
-
-.country-card div {
-    display: inline-block;
 }
 
 @media (hover: hover) and (min-width: $bp-md) {
@@ -201,11 +198,12 @@ body {
 }
 
 .left-column {
+    width: 100%;
     text-align: left;
-    margin: 0px auto 0px auto;
 }
 
 .right-column {
+    width: 100%;
     text-align: right;
 }
 
