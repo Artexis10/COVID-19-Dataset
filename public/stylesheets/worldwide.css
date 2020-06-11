@@ -8,13 +8,12 @@ body, html {
     width: 100%;
 }
 
-
-.background-picture {
+body {
+    background: linear-gradient(rgba(14, 17, 24, 0.90),
+    rgba(14, 17, 24, 0.90)), url(../images/worldwide.jpg);
     height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(rgba(14, 17, 24, 0.90),
-                                rgba(14, 17, 24, 0.90)), url(../images/worldwide.jpg);
 }

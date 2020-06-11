@@ -12,10 +12,11 @@ nav {
     width: 100%;
     top: 0;
     align-items: center;
-    min-height: 8vh;
+    /*min-height: 8vh;*/
     background-color: #1e2530;
     font-family: 'Poppins', sans-serif;
     opacity: 0.95;
+    height: 100px;
 }
 
 img {
@@ -100,6 +101,9 @@ ul {
 @media screen and (max-width: 1536px) {
     .nav-links {
         width: 34%;
+    }
+    nav {
+        height: 100px;
     }
 }
 
@@ -189,4 +193,9 @@ ul {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.content-pusher {
+    height: 110px;
+    width: 100%;
 }

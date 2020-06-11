@@ -1,26 +1,29 @@
 <%- include('includes/head.ejs') %>
 
-<%- include('includes/navigation.ejs') %>
+    <%- include('includes/navigation.ejs') %>
 
-<div class="continent-length-box"><h1>Infected continents: <%= continents.length %></h1></div>
+    <div class="continent-length-box"><h1>Infected continents: <%= continents.length %></h1></div>
 
-<div class="containers">
-    <% for (var i = 0; i < continents.length; i++) { %>
-        <div class="item">
-            <h1><%= continents[i].continent %></h1>
-            <hr class="header-separator">
-            <p>Population - <%= continents[i].population.toLocaleString() %></p>
-            <p>Infected - <%= continents[i].cases.toLocaleString() %></p>
-            <p>Infected today - <%= continents[i].todayCases.toLocaleString() %></p>
-            <p>Deaths - <%= continents[i].deaths.toLocaleString() %></p>
-            <p>Deaths today - <%= continents[i].todayDeaths.toLocaleString() %></p>
-            <p>Recovered - <%= continents[i].recovered.toLocaleString() %></p>
-            <p>Recovered today - <%= continents[i].todayRecovered.toLocaleString() %></p>
-            <p>Active - <%= continents[i].active.toLocaleString() %></p>
-            <p>Critical - <%= continents[i].critical.toLocaleString() %></p>
-            <p>Tests - <%= continents[i].tests.toLocaleString() %></p>
-        </div>
-    <% } %>
-</div>
+    <div class="page-content">
+        <% for (var i = 0; i < continents.length; i++) { %>
+            <div class="card">
+                <div class="content">
+                    <h1 class="title"><%= continents[i].continent %></h1>
+                    <div class="country-card">
+                        <div class="left-column">Population</div><div class="right-column"><%= continents[i].population.toLocaleString() %></div><br>
+                        <div class="left-column">Infected</div><div class="right-column"><%= continents[i].cases.toLocaleString() %></div><br>
+                        <div class="left-column">Infected today</div><div class="right-column"><%= continents[i].todayCases.toLocaleString() %></div><br>
+                        <div class="left-column">Deaths</div><div class="right-column"><%= continents[i].deaths.toLocaleString() %></div><br>
+                        <div class="left-column"> Deaths today</div><div class="right-column"><%= continents[i].todayDeaths.toLocaleString() %></div><br>
+                        <div class="left-column">Recovered</div><div class="right-column"><%= continents[i].recovered.toLocaleString() %></div><br>
+                        <div class="left-column">Recovered today</div><div class="right-column"><%= continents[i].todayRecovered.toLocaleString() %></div><br>
+                        <div class="left-column">Active</div><div class="right-column"><%= continents[i].active.toLocaleString() %></div><br>
+                        <div class="left-column">Critical</div><div class="right-column"><%= continents[i].critical.toLocaleString() %></div><br>
+                        <div class="left-column">Tests</div><div class="right-column"><%= continents[i].tests.toLocaleString() %></div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
 
 <%- include('includes/footer.ejs') %>
