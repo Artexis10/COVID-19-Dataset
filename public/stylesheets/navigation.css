@@ -17,6 +17,7 @@ nav {
     font-family: 'Poppins', sans-serif;
     opacity: 0.95;
     height: 100px;
+    z-index: 9999;
 }
 
 img {

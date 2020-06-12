@@ -2,8 +2,8 @@
 
 $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99';
 
-$bp-md: 600px;
-$bp-lg: 800px;
+$bp-md: 800px;
+$bp-lg: 1024px;
 
 :root {
   --d: 700ms;
@@ -17,28 +17,63 @@ $bp-lg: 800px;
 }
 
 html, body {
-  height: 100%;
+  background: linear-gradient(rgba(14, 17, 24, 0.80),
+  rgba(14, 17, 24, 0.80)), url(../images/atlas-ball-shaped-business-compass-269633.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-  display: grid;
   place-items: center;
 }
 
 .page-content {
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 2.5rem;
   padding: 1rem;
-  margin: 0 auto;
+  width: 95%;
+  margin: 0 auto !important;
+  text-align: center;
+  overflow: visible;
+  position: relative;
   font-family: var(--font-sans);
-  
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @media (min-width: $bp-lg) {
+  min-width: fit-content;
+  width: fit-content;
+
+  @media (max-width: 2560px) {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  @media (max-width: 1760px) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+  }
+
+  @media (max-width: 1536px) {
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+  }
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+  }
+
+  @media (max-width: 1097.143px) {
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+  }
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 }
 
 .card {  
@@ -46,11 +81,10 @@ body {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  width: 400px;
-  height: 600px;
+  width: 420px;
+  height: 630px;
   text-align: center;
   border: 0;
-  padding: 25px;
   user-select: none;
   color: whitesmoke;
   background-color: whitesmoke;
@@ -59,6 +93,7 @@ body {
     0 4px 4px rgba(0,0,0,0.1), 
     0 8px 8px rgba(0,0,0,0.1),
     0 16px 16px rgba(0,0,0,0.1);
+
   
   @media (min-width: $bp-md) {
     /*height: 350px;*/
@@ -108,14 +143,6 @@ body {
     transform: translateY(-50%);
     transition: transform calc(var(--d) * 2) var(--e);
   }
-  
-  @each $id in $imageIds {
-    $i: index($imageIds, $id);
-    
-    &:nth-child(#{$i}):before {
-      background-image: url(https://images.unsplash.com/photo-#{$id}?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    }
-  }
 }
 
 .content {
@@ -123,7 +150,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
   height: 100%;
   margin: 10px auto 10px auto;
   transition: transform var(--d) var(--e);
@@ -142,14 +169,12 @@ body {
 
 .country-card {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  line-height: 1.35;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.15);
   width: 100%;
   height: 100%;
   list-style: none;
-  padding: 4px;
   border-radius: 7px;
+  display: table-row;
 }
 
 @media (hover: hover) and (min-width: $bp-md) {
@@ -197,16 +222,51 @@ body {
   }
 }
 
+.left-column, .right-column {
+    font-size: 1.3rem;
+    padding: 8px;
+    display: table-cell;
+    height: 100%;
+    line-height: 53px;
+}
+
 .left-column {
-    width: 100%;
-    text-align: left;
+  width: 50%;
+  text-align: left !important;
 }
 
 .right-column {
-    width: 100%;
-    text-align: right;
+  width: 50%;
+  text-align: right !important;
 }
 
+.continent-length-box {
+  padding: 25px;
+  background-color: #1e2530;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  opacity: 0.95;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(250, 250, 250);
+}
+
+.card:nth-child(1):before {
+  background-image: url(../images/africa.jpg); }
+.card:nth-child(2):before {
+  background-image: url(../images/agriculture-asia-cat-china-235648.jpg); }
+.card:nth-child(3):before {
+  background-image: url(../images/australia.jpg); }
+.card:nth-child(4):before {
+  background-image: url(../images/europe.jpg); }
+
+.card:nth-child(5):before {
+    background-image: url(../images/north-america.jpg); }
+.card:nth-child(6):before {
+    background-image: url(../images/architecture-backlit-brazil-buildings-208357.jpg); }
+.card:nth-child(7):before {
+    background-image: url(../images/unknown.jpg); }
 
 /*
 .continent-length-box {
@@ -217,10 +277,6 @@ body {
         height: 100px;
         text-align: center;
         margin: 20px auto;
-        color: #ff0037;
+        color: rgb(250, 250, 250);
     }
 */
-
-/*
-*/
-

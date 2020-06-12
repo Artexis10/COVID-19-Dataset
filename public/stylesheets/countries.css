@@ -11,10 +11,9 @@ body, html {
 body {
     background: linear-gradient(rgba(14, 17, 24, 0.90),
     rgba(14, 17, 24, 0.90)), url(../images/black-and-white-world.png);
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 	font-family: 'Poppins', sans-serif;
     font-weight: 400;

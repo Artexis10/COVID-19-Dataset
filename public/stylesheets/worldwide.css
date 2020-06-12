@@ -9,11 +9,10 @@ body, html {
 }
 
 body {
-    background: linear-gradient(rgba(14, 17, 24, 0.90),
-    rgba(14, 17, 24, 0.90)), url(../images/worldwide.jpg);
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(14, 17, 24, 0.80),
+    rgba(14, 17, 24, 0.80)), url(../images/worldwide.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }

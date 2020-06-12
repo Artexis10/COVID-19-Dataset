@@ -32,9 +32,10 @@ app.use(function(req, res){
         pageTitle: "COVID-19 Statistics",
         pageNotFound: "Page Not Found!",
         stylesheet: "404",
-        activeHome: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
-        activeContinents: "nav-item pl-4 pl-md-0 ml-0 ml-md-4",
-        activeCountries: "nav-item pl-4 pl-md-0 ml-0 ml-md-4"
+        isActiveWorldwide: "inactive",
+        isActiveContinents: "inactive",
+        isActiveCountries: "inactive",
+        isActiveGraphs: "inactive"
     });
 });
 
