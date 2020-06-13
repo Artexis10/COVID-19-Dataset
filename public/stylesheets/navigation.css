@@ -115,7 +115,13 @@ ul {
 
 @media screen and (max-width: 1280px) {
     .nav-links {
-        width: 42%;
+        width: 30%;
+    }
+    .logo img {
+        height: 62.5px;
+    }
+    nav {
+        height: 83px;
     }
 
     .logo {
@@ -125,13 +131,25 @@ ul {
 
 @media screen and (max-width: 1097.1428px) {
     .nav-links {
-        width: 48%;
+        width: 80%;
+    }
+    .logo img {
+        height: 58.5px;
+    }
+    nav {
+        height: 78px;
     }
 }
 
 @media screen and (max-width: 960px) {
     .nav-links {
         width: 52%;
+    }
+    .logo img {
+        height: 56px;
+    }
+    nav {
+        height: 75px;
     }
 }
 
@@ -164,6 +182,12 @@ ul {
     .nav-links a{
         font-size: 12px;
     }
+    .logo img {
+        height: 52.5px;
+    }
+    nav {
+        height: 65px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -175,6 +199,12 @@ ul {
     }
     img {
         height: 55px;
+    }
+    .logo img {
+        height: 38px;
+    }
+    nav {
+        height: 50px;
     }
 }
 
