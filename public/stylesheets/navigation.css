@@ -18,6 +18,7 @@ nav {
     opacity: 0.95;
     height: 100px;
     z-index: 5000;
+    border-bottom: 1px solid black;
 }
 
 .logo img {
@@ -115,7 +116,7 @@ ul {
 
 @media screen and (max-width: 1280px) {
     .nav-links {
-        width: 30%;
+        width: 40%;
     }
     .logo img {
         height: 62.5px;
@@ -131,13 +132,13 @@ ul {
 
 @media screen and (max-width: 1097.1428px) {
     .nav-links {
-        width: 80%;
+        width: 46%;
     }
     .logo img {
-        height: 58.5px;
+        height: 60px;
     }
     nav {
-        height: 78px;
+        height: 70px;
     }
 }
 
@@ -149,7 +150,7 @@ ul {
         height: 56px;
     }
     nav {
-        height: 75px;
+        height: 60px;
     }
 }
 
@@ -161,8 +162,8 @@ ul {
         width: 50%;
         position: absolute;
         right: 0;
-        height: 85vh;
-        top: 15vh;
+        height: 100vh;
+        top: 5vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -186,7 +187,7 @@ ul {
         height: 52.5px;
     }
     nav {
-        height: 65px;
+        height: 50px;
     }
 }
 
@@ -201,10 +202,10 @@ ul {
         height: 55px;
     }
     .logo img {
-        height: 38px;
+        height: 48px;
     }
     nav {
-        height: 50px;
+        height: 45px;
     }
 }
 
