@@ -117,6 +117,10 @@ ul {
     .nav-links {
         width: 42%;
     }
+
+    .logo {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 1097.1428px) {

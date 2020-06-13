@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
-//const path = require('path');
 const databaseCreatorFunctions = require('./database-creator.js')
 require('dotenv/config');
 
