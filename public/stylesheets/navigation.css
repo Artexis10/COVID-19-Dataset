@@ -17,13 +17,18 @@ nav {
     font-family: 'Poppins', sans-serif;
     opacity: 0.95;
     height: 100px;
-    z-index: 9999;
+    z-index: 5000;
 }
 
-img {
+.logo img {
     margin: 0 !important;
     padding: 10px 0px;
     height: 75px;
+    width: auto;
+}
+
+.logo {
+    z-index: 5001 !important;
 }
 
 .nav-links li a {
@@ -88,7 +93,7 @@ ul {
 .burger {
     display: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 5001 !important;
 }
 
 .burger div {
@@ -134,8 +139,8 @@ ul {
         width: 50%;
         position: absolute;
         right: 0;
-        height: 92vh;
-        top: 8vh;
+        height: 85vh;
+        top: 15vh;
         display: flex;
         flex-direction: column;
         align-items: center;
