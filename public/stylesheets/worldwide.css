@@ -4,18 +4,23 @@
 }
 
 body, html {
+    /*
     height: 100%;
     width: 100%;
+    */
 }
 
 body {
     /*
     background: linear-gradient(rgba(14, 17, 24, 0.80),
     rgba(14, 17, 24, 0.80)), url(../images/worldwide.jpg);
-    */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*center center cover no-repeat fixed*/
+    center center cover no-repeat fixed*/
+}
+
+.content-pusher {
+    height: 0;
 }

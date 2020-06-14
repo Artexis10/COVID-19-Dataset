@@ -16,8 +16,9 @@ nav {
     background-color: #1e2530;
     font-family: 'Poppins', sans-serif;
     opacity: 0.95;
-    height: 100px;
+    height: 95px;
     z-index: 5000;
+    border-bottom: 1px solid black;
 }
 
 .logo img {
@@ -109,31 +110,35 @@ ul {
         width: 34%;
     }
     nav {
-        height: 100px;
+        height: 95px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .nav-links {
-        width: 30%;
+        width: 40%;
     }
     .logo img {
         height: 62.5px;
     }
     nav {
-        height: 83px;
+        height: 79px;
+    }
+
+    .logo {
+        padding: 0;
     }
 }
 
 @media screen and (max-width: 1097.1428px) {
     .nav-links {
-        width: 80%;
+        width: 46%;
     }
     .logo img {
-        height: 58.5px;
+        height: 60px;
     }
     nav {
-        height: 78px;
+        height: 68px;
     }
 }
 
@@ -145,7 +150,7 @@ ul {
         height: 56px;
     }
     nav {
-        height: 75px;
+        height: 59px;
     }
 }
 
@@ -157,8 +162,8 @@ ul {
         width: 50%;
         position: absolute;
         right: 0;
-        height: 85vh;
-        top: 15vh;
+        height: 100vh;
+        top: 5vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -182,7 +187,7 @@ ul {
         height: 52.5px;
     }
     nav {
-        height: 65px;
+        height: 48px;
     }
 }
 
@@ -197,10 +202,10 @@ ul {
         height: 55px;
     }
     .logo img {
-        height: 38px;
+        height: 48px;
     }
     nav {
-        height: 50px;
+        height: 43px;
     }
 }
 
