@@ -66,7 +66,7 @@ body {
     background: #1e2530;
     position: -webkit-sticky;
     position: sticky;
-    top: 100px;
+    top: 90px;
     font-weight: bold;
     color: #ff0037;
     opacity: 0.95;
@@ -158,7 +158,7 @@ th:after {
       padding: 10px;
       border: 0 !important;
       position: sticky;
-      top: 83px;
+      top: 78px;
       opacity: 0.95;
     }
   }
@@ -172,7 +172,7 @@ th:after {
   @media screen and (max-width: 960px) {
     .countries-table .mobile-header {
       font-size: 16px;
-      top: 60px;
+      top: 58px;
     }
   }
 
@@ -186,7 +186,7 @@ th:after {
   @media screen and (max-width: 640px) {
     .countries-table .mobile-header {
       font-size: 10px;
-      top: 45px;
+      top: 42px;
     }
 }
 
