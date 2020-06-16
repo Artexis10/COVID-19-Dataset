@@ -18,7 +18,7 @@ $bp-lg: 1024px;
 
 html, body {
   background: linear-gradient(rgba(14, 17, 24, 0.80),
-  rgba(14, 17, 24, 0.80)), url(../images/atlas-ball-shaped-business-compass-269633.jpg);
+  rgba(14, 17, 24, 0.80)), url(../images/globe.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,6 +35,7 @@ body {
   padding: 1rem;
   width: 95%;
   margin: 0 auto !important;
+  margin-bottom: 20px;
   text-align: center;
   overflow: visible;
   position: relative;
@@ -255,7 +256,7 @@ body {
 .card:nth-child(1):before {
   background-image: url(../images/africa.jpg); }
 .card:nth-child(2):before {
-  background-image: url(../images/agriculture-asia-cat-china-235648.jpg); }
+  background-image: url(../images/asia.jpg); }
 .card:nth-child(3):before {
   background-image: url(../images/australia.jpg); }
 .card:nth-child(4):before {
@@ -264,7 +265,7 @@ body {
 .card:nth-child(5):before {
     background-image: url(../images/north-america.jpg); }
 .card:nth-child(6):before {
-    background-image: url(../images/architecture-backlit-brazil-buildings-208357.jpg); }
+    background-image: url(../images/south-america.jpg); }
 .card:nth-child(7):before {
     background-image: url(../images/unknown.jpg); }
 
