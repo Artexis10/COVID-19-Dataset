@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    row-gap: 25px;
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto 100px auto;
+}
+
+.description-box {
+    padding: 1em;
+}
+
+.odd-graph-container {
+    display: grid;
+    grid-template-columns: 2fr 15fr;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+}
+
+.even-graph-container {
+    display: grid;
+    grid-template-columns: 15fr 2fr;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+}
+
+.graph-heading {
+    text-align: center;
+    justify-self: center;
+    margin: 40px auto;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+/*
+.container > div {
+    background: rgba(235, 235, 235, 0.2);
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+*/

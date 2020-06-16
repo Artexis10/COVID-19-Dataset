@@ -2,51 +2,100 @@
 
     <%- include('includes/navigation.ejs') %>
 
-    <div id="wrapper">
-        <div class="chart">
-           <h3>Population of endangered species from 2012 to 2016</h3>
-           <table id="data-table" cellpadding="10" cellspacing="0"
-           summary="The effects of the zombie outbreak on the populations
-           of endangered species from 2012 to 2016">
-              <caption>Population in thousands</caption>
-              <thead>
-                 <tr>
-                    <td>&nbsp;</td>
-                    <th scope="col">2012</th>
-                    <th scope="col">2013</th>
-                    <th scope="col">2014</th>
-                    <th scope="col">2015</th>
-                    <th scope="col">2016</th>
-                 </tr>
-              </thead>
-              <tbody>
-                 <tr>
-                    <th scope="row">Carbon Tiger</th>
-                    <td>4080</td>
-                    <td>6080</td>
-                    <td>6240</td>
-                    <td>3520</td>
-                    <td>2240</td>
-                 </tr>
-                 <tr>
-                    <th scope="row">Blue Monkey</th>
-                    <td>5680</td>
-                    <td>6880</td>
-                    <td>6240</td>
-                    <td>5120</td>
-                    <td>2640</td>
-                 </tr>
-                 <tr>
-                    <th scope="row">Tanned Zombie</th>
-                    <td>1040</td>
-                    <td>1760</td>
-                    <td>2880</td>
-                    <td>4720</td>
-                    <td>7520</td>
-                 </tr>
-              </tbody>
-           </table>
+    <div class="container">
+        <h1 class="graph-heading">Spread by Continent</h1>
+        <div class="odd-graph-container">
+            <div class="description-box">
+                <h1>Asia</h1>
+                <p>This graph shows infected, death, and recovered count per country on the Asian continent.</p>
+            </div>
+            <div class="chart-box">
+                <canvas id="asiaChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
         </div>
-     </div>
+
+        <div class="even-graph-container">
+            <div class="chart-box">
+                <canvas id="africaChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+            <div class="description-box">
+                <h1>Africa</h1>
+                <p>This graph shows infected, death, and recovered count per country on the African continent.</p>
+            </div>
+        </div>
+
+        <div class="odd-graph-container">
+            <div class="description-box">
+                <h1>Australia/Oceania</h1>
+                <p>This graph shows infected, death, and recovered count per country on the Australian/Oceanian continent.</p>
+            </div>
+            <div class="chart-box">
+                <canvas id="australiaOceaniaChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+        </div>
+
+        <div class="even-graph-container">
+            <div class="chart-box">
+                <canvas id="europeChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+            <div class="description-box">
+                <h1>Europe</h1>
+                <p>This graph shows infected, death, and recovered count per country on the European continent.</p>
+            </div>
+        </div>
+
+        <div class="odd-graph-container">
+            <div class="description-box">
+                <h1>North America</h1>
+                <p>This graph shows infected, death, and recovered count per country on the North American continent.</p>
+            </div>
+            <div class="chart-box">
+                <canvas id="northAmericaChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+        </div>
+
+        <div class="even-graph-container">
+            <div class="chart-box">
+                <canvas id="southAmericaChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+            <div class="description-box">
+                <h1>South America</h1>
+                <p>This graph shows infected, death, and recovered count per country on the South American continent.</p>
+            </div>
+        </div>
+
+        <h1 class="graph-heading">Continents</h1>
+
+        <div class="odd-graph-container">
+            <div class="description-box">
+                <h1>Distribution Between Continents</h1>
+                <p>This graph highlights the distribution of the infection in all of the documented continents.</p>
+            </div>
+            <div class="chart-box">
+                <div id="legend"></div>
+                <canvas id="continentsChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+        </div>
+
+        <h1 class="graph-heading">Global</h1>
+
+        <div class="even-graph-container">
+            <div class="chart-box">
+                <canvas id="worldChart" aria-label="Hello ARIA World" role="img"></canvas>
+            </div>
+            <div class="description-box">
+                <h1>Global Statistics</h1>
+                <p>This graph presents the spread, morbidity, and recovery from the novel coronavirus since its documented start.</p>
+            </div>
+        </div>
+
+        <h1 class="graph-heading">Timeline of the Novel Coronavirus</h1>
+        
+        <div class="chart-box">
+            <canvas id="timelineChart" aria-label="Hello ARIA World" role="img"></canvas>
+        </div>
+    </div>
+
+    <script src="dist/Chart.bundle.min.js"></script>
 
 <%- include('includes/footer.ejs') %>
