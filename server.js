@@ -5,8 +5,6 @@ const app = express();
 const databaseCreatorFunctions = require('./database-creator.js')
 require('dotenv').config();
 
-console.log(process.env.DB_CONNECTION);
-
 app.set('view engine', 'ejs');  
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,6 +26,7 @@ app.use('/continents', continentsRoute);
 app.use('/countries', countriesRoute);
 app.use('/graphs', graphsRoute);
 
+/*
 app.use(function(req, res){
     res.status(404).render('404', {
         pageTitle: "COVID-19 Statistics",
@@ -39,6 +38,7 @@ app.use(function(req, res){
         isActiveGraphs: "inactive"
     });
 });
+*/
 
 // Middlewares
 app.use('/', () => {
