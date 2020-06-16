@@ -26,7 +26,6 @@ app.use('/continents', continentsRoute);
 app.use('/countries', countriesRoute);
 app.use('/graphs', graphsRoute);
 
-/*
 app.use(function(req, res){
     res.status(404).render('404', {
         pageTitle: "COVID-19 Statistics",
@@ -38,7 +37,6 @@ app.use(function(req, res){
         isActiveGraphs: "inactive"
     });
 });
-*/
 
 // Middlewares
 app.use('/', () => {
@@ -57,7 +55,7 @@ mongoose.connect(
 var port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log("Server is Running on Port 3000");
+    console.log("Server is Running on Port ${port}");
 });
 
 databaseCreatorFunctions.FetchingContinentDataFromCOVID_19_API();
