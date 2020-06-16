@@ -16,7 +16,7 @@ nav {
     background-color: #1e2530;
     font-family: 'Poppins', sans-serif;
     opacity: 0.95;
-    height: 100px;
+    height: 95px;
     z-index: 5000;
     border-bottom: 1px solid black;
 }
@@ -110,7 +110,7 @@ ul {
         width: 34%;
     }
     nav {
-        height: 100px;
+        height: 95px;
     }
 }
 
@@ -122,7 +122,11 @@ ul {
         height: 62.5px;
     }
     nav {
-        height: 83px;
+        height: 79px;
+    }
+
+    .logo {
+        padding: 0;
     }
 
     .logo {
@@ -138,7 +142,7 @@ ul {
         height: 60px;
     }
     nav {
-        height: 70px;
+        height: 68px;
     }
 }
 
@@ -150,7 +154,7 @@ ul {
         height: 56px;
     }
     nav {
-        height: 60px;
+        height: 59px;
     }
 }
 
@@ -187,7 +191,7 @@ ul {
         height: 52.5px;
     }
     nav {
-        height: 50px;
+        height: 48px;
     }
 }
 
@@ -205,7 +209,7 @@ ul {
         height: 48px;
     }
     nav {
-        height: 45px;
+        height: 43px;
     }
 }
 
