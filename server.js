@@ -43,6 +43,24 @@ app.use('/', () => {
     console.log('Middleware running');
 });
 
+var options = { 
+    server: { 
+      socketOptions: { 
+        keepAlive: 300000, connectTimeoutMS: 30000 
+      } 
+    }, 
+    replset: { 
+      socketOptions: { 
+        keepAlive: 300000, 
+        connectTimeoutMS : 30000 
+      } 
+    } 
+};
+
+mongoose.connect(
+    process.env.DB_CONNECTION, options);
+
+/*
 // Connecting to database
 mongoose.connect(
     process.env.DB_CONNECTION, 
@@ -51,6 +69,7 @@ mongoose.connect(
 ).catch(e => {
     console.error(e.message);
 });
+*/
 
 var port = process.env.PORT || 3000;
 
