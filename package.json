@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "DB_CONNECTION='mongodb+srv://Artexis:jdjgMmXbkKk703nu@dataset-1ud9x.mongodb.net/COVID-19-Dataset' node server.js",
     "scss": "node-sass --watch public/scss/ -o public/stylesheets/"
   },
   "author": "",
