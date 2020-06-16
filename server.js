@@ -5,7 +5,7 @@ const app = express();
 const databaseCreatorFunctions = require('./database-creator.js')
 require('dotenv').config();
 
-console.log(DB_CONNECTION);
+console.log(process.env.DB_CONNECTION);
 
 app.set('view engine', 'ejs');  
 app.use(express.static(__dirname + '/public'));
