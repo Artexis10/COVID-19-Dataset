@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const databaseCreatorFunctions = require('./database-creator.js')
-require('dotenv/config');
+require('dotenv/config').config({ path: '.env' });
 
 app.set('view engine', 'ejs');  
 app.use(express.static(__dirname + '/public'));
