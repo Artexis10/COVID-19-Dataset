@@ -9,8 +9,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-console.log(process.env.DB_CONNECTION);
-
 // Import Routes
 const indexRoute = require('./routes/index');
 
@@ -54,7 +52,9 @@ mongoose.connect(
     console.error(e.message);
 });
 
-app.listen(3000, () => {
+var port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log("Server is Running on Port 3000");
 });
 
