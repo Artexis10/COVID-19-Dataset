@@ -1,9 +1,9 @@
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const databaseCreatorFunctions = require('./database-creator.js')
+require('dotenv').config();
 
 app.set('view engine', 'ejs');  
 app.use(express.static(__dirname + '/public'));
