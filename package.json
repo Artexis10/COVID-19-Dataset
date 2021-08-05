@@ -13,15 +13,15 @@
     "node": "10.x"
   },
   "dependencies": {
-    "chart.js": "^2.9.3",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.2",
+    "chart.js": "^2.9.4",
+    "dotenv": "^8.6.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "jquery": "^3.5.1",
-    "mongoose": "^5.9.10",
-    "node-fetch": "^2.6.0",
+    "jquery": "^3.6.0",
+    "mongoose": "^5.13.5",
+    "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.3",
-    "svgmap": "^1.5.0"
+    "nodemon": "^2.0.12",
+    "svgmap": "^1.6.1"
   }
 }
