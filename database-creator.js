@@ -18,14 +18,12 @@ function FetchingContinentDataFromCOVID_19_API() {
         .then((count) => {
           continent_length = count;
           var queryData = Continent.find({}, (err, continents) => {
-            console.log(continents);
             return continents;
           });
           queryData
             .exec()
             .then((continents) => {
               continents_arr = continents;
-              console.log(continents);
               if (continent_length === 0) {
                 continents_arr =
                   InsertingDocumentsToContinentCollection(list_of_continents);
