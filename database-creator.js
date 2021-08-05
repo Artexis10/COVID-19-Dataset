@@ -35,7 +35,7 @@ function FetchingContinentDataFromCOVID_19_API() {
                 for (i = 0; i < list_of_continents.length; i++) {
                   if (
                     list_of_continents[i].updated >
-                    continents_arr[i]?.last_update + 599999
+                    continents_arr?.[i]?.last_update + 599999
                   ) {
                     Continent.updateOne(
                       { continent: list_of_continents[i].continent },
