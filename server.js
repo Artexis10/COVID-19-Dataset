@@ -47,7 +47,10 @@ app.use("/", () => {
 mongoose.connect(
   process.env.DB_CONNECTION,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  () => console.log("Connected to AtlasDB!")
+  () => {
+    console.log("Connected to AtlasDB!");
+    databaseCreatorFunctions.FetchingContinentDataFromCOVID_19_API();
+  }
 );
 
 var port = process.env.PORT || 3000;
@@ -56,4 +59,3 @@ app.listen(port, () => {
   console.log(`Server is Running on Port ${port}`);
 });
 
-databaseCreatorFunctions.FetchingContinentDataFromCOVID_19_API();
