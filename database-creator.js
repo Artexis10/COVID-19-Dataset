@@ -33,10 +33,9 @@ function FetchingContinentDataFromCOVID_19_API() {
                 continent_length < list_of_continents.length + 1
               ) {
                 for (i = 0; i < list_of_continents.length; i++) {
-                  if (
-                    list_of_continents[i].updated >
-                    continents_arr?.[i]?.last_update + 599999
-                  ) {
+                  let lastUpdate =
+                    continents_arr[i] && continents_arr[i].last_update;
+                  if (list_of_continents[i].updated > lastUpdate + 599999) {
                     Continent.updateOne(
                       { continent: list_of_continents[i].continent },
                       {
