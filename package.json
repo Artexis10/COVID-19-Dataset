@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "jquery": "^3.6.0",
     "mongoose": "^5.13.5",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.12",
     "svgmap": "^1.6.1"
