@@ -20,7 +20,7 @@
     "jquery": "^3.6.0",
     "mongoose": "^5.13.5",
     "node-fetch": "^2.6.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.12",
     "svgmap": "^1.6.1"
   }
